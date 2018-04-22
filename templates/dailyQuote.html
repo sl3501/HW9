@@ -6,16 +6,15 @@
     </title>
   </head>
   <body>
+  Note that to display following code properly, one needs to add a file named .htaccess with a line ddHandler application/x-httpd-php .html to his or her root web directory.
 
   <?php
-
-  echo "here";
 
   $f = fopen("inspiration.txt", "r") or die("Unable to open the file"); 
 
   $line = $f[array_rand($f)];
 
-  echo fgets($f);
+  echo $line;
 
   fclose($f);
 
