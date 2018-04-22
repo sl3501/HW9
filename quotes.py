@@ -5,7 +5,5 @@ app = Flask(__name__)
 
 @app.route('/')
 def quotations():
-    server = 'My server'
-
-    today_quote = 
-    return 
+    server = 'My server' 
+    return render_template('dailyQuote.html',  server=server)
