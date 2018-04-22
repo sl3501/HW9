@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+    Quote from {{ server }}
+    </title>
+  </head>
+  <body>
+
+  <?php
+
+  echo "here";
+
+  $f = fopen("inspiration.txt", "r") or die("Unable to open the file"); 
+
+  $line = $f[array_rand($f)];
+
+  echo fgets($f);
+
+  fclose($f);
+
+  ?>
+
+  </body>
+</html>
